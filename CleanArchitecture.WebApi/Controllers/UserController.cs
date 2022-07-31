@@ -33,5 +33,14 @@ namespace CleanArchitecture.WebApi.Controllers
                 return NotFound("notfound user");
             return Ok(user);
         }
+
+        [HttpPut, Route("UpdateUser")]
+        public async Task<IActionResult> PutUser(UpdateUserViewModel model)
+        {
+            var result = await _mediator.Send(new UpdateUserCommand(model));
+            if (result.Result)
+                return Ok(result.Message);
+            return BadRequest(result.Message);
+        }
     }
 }

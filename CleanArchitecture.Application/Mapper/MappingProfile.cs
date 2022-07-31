@@ -19,6 +19,9 @@ namespace CleanArchitecture.Application.Mapper
 
             CreateMap<AddUserViewModel, TblUser>();
             CreateMap<TblUser, AddUserViewModel>();
+
+            CreateMap<UpdateUserViewModel, TblUser>();
+            CreateMap<TblUser, UpdateUserViewModel>();
             #endregion
         }
     }

@@ -1,5 +1,6 @@
 ﻿using CleanArchitecture.Core.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
